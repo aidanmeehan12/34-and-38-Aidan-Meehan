@@ -2,3 +2,42 @@ html {
   height: 100%;
   width: 100%;
 }
+
+body {
+ margin:0px; 
+}
+
+.navContainer {
+  display:grid;
+  grid-template-columns:1fr 3fr 4fr 1fr 1fr;
+  background-color:#bf6336;
+  height:96px;
+}
+
+.navItem {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  font-size:26px;
+  font-family: "Kumar One", serif;
+  color:white;
+  padding-top:28px;
+}
+
+#navLogo {
+  grid-column: 1 / span 1;
+}
+
+#navTitle {
+  grid-column: 2 / span 1;
+}
+
+#navButton1 {
+  grid-column: 4 / span 1;
+}
+
+#navButton2 {
+  grid-column: 5 / span 1;
+}
+
+
