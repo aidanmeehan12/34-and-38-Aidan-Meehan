@@ -5,81 +5,110 @@ html {
 
 body {
   margin: 0;
-  height: 100%;
-  display: grid;
 }
 
 img {
-  max-height:100%;
-  max-width:100%;
+  width: 100%;
 }
 
-@media only screen and (min-width: 768px) {
-.navContainer {
-  display: grid;
-  grid-template-columns: 100px 400px 1fr 100px 20px 100px 25px;
-  background-color: #bf6336;
-  height: 80px;
-  align-self: start; }
-  
-.navItem {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  font-family: "Kumar One", serif;
-  color: white;
-  padding: 0px 12.5px; }
-  
-#navLogo {
-  grid-column: 1 / span 1; }
-  
-#navTitle {
-  grid-column: 2 / span 1; }
-  
-#navMenu {
-  grid-column: 4 / span 1;
-  justify-self: end; }
-  
-#navAbout {
-  grid-column: 6 / span 1;
-  justify-self: end; }
-  
-#navMenu:hover, #navAbout:hover {
-  background-color: brown; }
-  
-.navContainerMobile {
-  visibility: none; }
+@media only screen and (min-width: 600px) {
+  .navContainer {
+    display: grid;
+    grid-template-columns: 100px 400px 1fr 100px 20px 100px 25px;
+    background-color: #bf6336;
+    height: 80px;
+    align-self: start;
+  }
+
+  .navItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-family: "Kumar One", serif;
+    color: white;
+    padding: 0px 12.5px;
+  }
+
+  #navLogo {
+    grid-column: 1 / span 1;
+  }
+
+  #navTitle {
+    grid-column: 2 / span 1;
+  }
+
+  #navMenu {
+    grid-column: 4 / span 1;
+    justify-self: end;
+  }
+
+  #navAbout {
+    grid-column: 6 / span 1;
+    justify-self: end;
+  }
+
+  #navMenu:hover,
+  #navAbout:hover {
+    background-color: brown;
+  }
+
+  .bodyContainer {
+    display: grid;
+    max-height:100vh;
+    grid-template-columns: 1fr 5fr 5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      'leftBar bodyReview bodyReview rightBar'
+      'leftBar coffeeImage coffeeImage rightBar'
+      'leftBar bodyText bodyText rightBar'
+      'leftBar barista1 barista2 rightBar'
+  }
+
+  #leftBar {
+    grid-area: leftBar;
+  }
+
+  #rightBar {
+    grid-area: rightBar;
+  }
+
+  #coffeeImage {
+    grid-area:coffeeImage;
+  }
+
+  .barista1 {
+    grid-area: barista1;
+  }
+
+  .barista2 {
+    grid-area: barista2;
+  }
+
+  #bodyReview {
+    padding:5vh;
+    font-size: 15px;
+    text-align: center;
+    grid-area: bodyReview;
+    font-family: "Kumar One", serif;
+  }
+
+  #bodyText {
+    padding:5vh;
+    font-size: 20px;
+    grid-area: bodyText;
+    background-color: #523a28;
+    text-align: center;
+    color: white;
+    font-family: "Alata", sans-serif;
+  }
+
+  .footerContainer {
+    display: grid;
+    grid-template-columns: ;
+    background-color: #bf6336;
+    height: 80px;
+  }
 }
 
-.bodyContainer {
-  display:grid;
-  grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
-  grid-template-rows: 150px 800px;
-  grid-template-areas:
-  'leftBar bodyReview bodyReview bodyReview rightBar'  
-  'leftBar bodyPhoto1 bodyPhoto2 bodyPhoto3 rightBar';
-}
-
-#leftBar {
-  grid-area:leftBar;
-}
-#rightBar {
-  grid-area:rightBar;
-}
-
-#bodyPhoto1 {
-  grid-area: bodyPhoto1;
-}
-
-#bodyPhoto2 {
-  grid-area:bodyPhoto2;
-}
-
-#bodyPhoto3 {
-  grid-area:bodyPhoto3
-}
-
-/* web layout end */
-
-
+  /* web layout end */
