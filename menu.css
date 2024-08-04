@@ -1,0 +1,147 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  max-height:100%;
+  margin:0;
+}
+
+@media only screen and (min-width: 600px) {
+  .navContainer {
+    display: grid;
+    grid-template-columns: 100px 500px 1fr 100px 20px 100px 25px;
+    background-color: #bf6336;
+    height: 80px;
+    align-self: start;
+  }
+
+  .navItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-family: "Kumar One", serif;
+    color: white;
+    padding: 0px 12.5px;
+  }
+
+  #navLogo {
+    grid-column: 1 / span 1;
+  }
+
+  #navTitle {
+    grid-column: 2 / span 1;
+  }
+
+  #navMenu {
+    grid-column: 4 / span 1;
+    justify-self: end;
+  }
+
+  #navAbout {
+    grid-column: 6 / span 1;
+    justify-self: end;
+  }
+
+  #navMenu:hover,
+  #navAbout:hover {
+    background-color: brown;
+  }
+
+}
+
+#menuBlurb {
+ padding:5vh;
+  font-size: 15px;
+  text-align: center;
+  grid-area: bodyReview;
+  font-family: "Kumar One", serif;
+}
+
+.menuContainer {
+  display: grid;
+  margin-left: 20px;
+  margin-right:20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'flatWhite icedCoffee milkshake'
+    'espresso otherDrinks coffeeExtras';
+  gap: 10px; /* Applies spacing between grid items */
+}
+
+.flatWhite,
+.icedCoffee,
+.milkshake,
+.espresso,
+.otherDrinks,
+.coffeeExtras {
+  border: solid 5px;
+}
+
+.menuContainer img {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* General Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Modal Content Image */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  background-color:#E97451;
+  height: 80%;
+  max-height: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.image {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.image:hover {
+    opacity: 0.7;
+}
