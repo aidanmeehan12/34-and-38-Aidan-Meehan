@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="menu.css" rel="stylesheet" type="text/css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,9 +18,55 @@
   
   <div class="navContainer">
     <div class="navItem" id="navLogo">Logo</div>
-    <div class="navItem" id="navTitle">HVHS COFFEE HOUSE</div>
-    <div class="navItem" id="navMenu">Menu</div>
+    <div class="navItem" id="navTitle">HVHS COFFEE HOUSE - MENU </div>
+    <div class="navItem" id="navMenu" onclick="sendToHome()">Home</div>
     <div class="navItem" id="navAbout">About</div>
+  </div>
+
+  <div id="menuBlurb">"Check out all the drinks we offer at the coffee house!"</div>
+
+  <div class="menuContainer">
+    <div class="modal" id="flatWhiteModal">
+      <span class="close">&times;</span>
+      <div class="modal-content"> gangsta </div>
+    </div>
+
+    <img src="images/flatWhite.jpg" class="image" alt="flatWhiteInfo" onclick="openModal('flatWhiteModal')">
+    
+    <div class="modal" id="espressoModal">
+      <span class="close">&times;</span>
+      <div class="modal-content"> gangsta </div>
+    </div>
+
+    <img src="images/espresso.jpg" class="image" alt="espressoInfo" onclick="openModal('espressoModal')">
+    
+    <div class="modal" id="icedCoffeeModal">
+      <span class="close">&times;</span>
+      <div class="modal-content"> gangsta </div>
+    </div>
+
+    <img src="images/icedCoffee.jpg" class="image" alt="icedCoffeeInfo" onclick="openModal('icedCoffeeModal')">
+    
+    <div class="modal" id="milkshakeModal">
+      <span class="close">&times;</span>
+      <div class="modal-content"> gangsta </div>
+    </div>
+
+    <img src="images/milkshake.jpg" class="image" alt="milkshakeInfo" onclick="openModal('milkshakeModal')">
+    
+    <div class="modal" id="otherDrinksModal">
+      <span class="close">&times;</span>
+      <div class="modal-content"> gangsta </div>
+    </div>
+
+    <img src="images/coffeeBeans.jpg" class="image" alt="otherDrinksInfo" onclick="openModal('otherDrinksModal')">
+    
+    <div class="modal" id="extrasModal">
+      <span class="close">&times;</span>
+      <div class="modal-content"> gangsta </div>
+    </div>
+
+    <img src="images/coffeeCoffee.jpg" class="image" alt="extrasInfo" onclick="openModal('extrasModal')">
   </div>
 
 </body>
