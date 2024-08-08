@@ -95,7 +95,7 @@ img {
 
   #bodyText {
     padding:5vh;
-    font-size: 20px;
+    font-size: 40px;
     grid-area: bodyText;
     background-color: #523a28;
     text-align: center;
