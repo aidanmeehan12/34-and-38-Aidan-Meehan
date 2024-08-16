@@ -11,7 +11,7 @@ img {
   width: 100%;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   .navContainer {
     display: grid;
     grid-template-columns: 100px 400px 1fr 100px 20px 100px 25px;
@@ -20,6 +20,17 @@ img {
     align-self: start;
   }
 
+  .bodyContainer {
+    display: grid;
+    max-height:100vh;
+    grid-template-columns: 1fr 5fr 5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      'leftBar bodyReview bodyReview rightBar'
+      'leftBar coffeeImage coffeeImage rightBar'
+      'leftBar bodyText bodyText rightBar'
+      'leftBar barista1 barista2 rightBar'
+  }
   .navItem {
     display: flex;
     align-items: center;
@@ -52,18 +63,17 @@ img {
   #navAbout:hover {
     background-color: brown;
   }
-
-  .bodyContainer {
-    display: grid;
-    max-height:100vh;
-    grid-template-columns: 1fr 5fr 5fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-      'leftBar bodyReview bodyReview rightBar'
-      'leftBar coffeeImage coffeeImage rightBar'
-      'leftBar bodyText bodyText rightBar'
-      'leftBar barista1 barista2 rightBar'
+  .overlay-text {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: #fff; 
+    font-size: 40px; 
+    text-align: center;
+    font-family: "Kumar One", serif;
   }
+}
 
   #leftBar {
     grid-area: leftBar;
@@ -77,11 +87,11 @@ img {
     grid-area:coffeeImage;
   }
 
-  .barista1 {
+  #barista1 {
     grid-area: barista1;
   }
 
-  .barista2 {
+  #barista2 {
     grid-area: barista2;
   }
 
@@ -95,7 +105,7 @@ img {
 
   #bodyText {
     padding:5vh;
-    font-size: 40px;
+    font-size: 20px;
     grid-area: bodyText;
     background-color: #523a28;
     text-align: center;
@@ -109,21 +119,25 @@ img {
     background-color: #bf6336;
     height: 80px;
   }
-}
+
 
 .image-container {
   position: relative;
   display: inline-block;
 }
 
-.overlay-text {
-  position: absolute;
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-  color: #fff; 
-  font-size: 50px; 
-  text-align: center;
-  font-family: "Kumar One", serif;
+@media only screen and (max-width: 768px) {
+
+  .bodyContainer {
+    display: grid;
+    max-height:100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    'bodyReview'
+    'coffeeImage'
+    'bodyText'
+    'barista1'
+    'barista2'
+  }
 }
-  /* web layout end */

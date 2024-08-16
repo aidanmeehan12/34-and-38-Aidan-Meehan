@@ -74,7 +74,7 @@ img {
   grid-template-areas:
     'flatWhite icedCoffee milkshake'
     'espresso otherDrinks coffeeExtras';
-  gap: 10px; /* Applies spacing between grid items */
+  gap: 10px; 
 }
 
 .flatWhite,
@@ -92,7 +92,6 @@ img {
   padding: 0;
 }
 
-/* General Modal Styles */
 .modal {
   display: none;
   position: fixed;
@@ -102,7 +101,7 @@ img {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
   background-color: rgba(0,0,0,0.8);
   justify-content: center;
   align-items: center;
@@ -120,7 +119,7 @@ img {
   max-height: 700px;
   font-family: "Alata", sans-serif;
   color:white;
-  padding:20px;
+  text-align:center;
 }
 
 .close {
@@ -147,4 +146,43 @@ img {
 
 .image:hover {
     opacity: 0.7;
+}
+
+#bigBlock {
+  min-height: 8px;
+  background-color: white;
+  font-size:1px;
+  width:75%;
+  margin: 0 auto;
+}
+
+#smallBlock {
+  min-height: 5px;
+  background-color: white;
+  font-size:1px;
+  width:25%;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size:32px;
+}
+
+h4 {
+  font-size:22px;
+  margin: 8px auto 0px;
+}
+
+h5 {
+  font-size:20px;
+  margin: 0px auto 10px;
+  font-weight:50;
+  padding: 0px 10px;
+}
+
+#hiddenBlock {
+  min-height: 10px;
+  background-color: #E97451;
+  font-size:1px;
+  width:25%;
 }
