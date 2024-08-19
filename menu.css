@@ -77,6 +77,25 @@ img {
   gap: 10px; 
 }
 
+#flatWhite {
+  grid-area: flatWhite;
+}
+#icedCoffee {
+  grid-area: icedCoffee;
+}
+#milkshake {
+  grid-area: milkshake;
+}
+#espresso {
+  grid-area: espresso;
+}
+#otherDrinks {
+  grid-area: otherDrinks;
+}
+#coffeeExtras {
+  grid-area: coffeeExtras;
+}
+
 .flatWhite,
 .icedCoffee,
 .milkshake,

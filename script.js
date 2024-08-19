@@ -25,3 +25,9 @@ function openModal(modalId) {
         }
     }
 }
+
+document.getElementById('leftBar').style.gridArea = 'leftBar';
+document.getElementById('rightBar').style.gridArea = 'rightBar';
+document.getElementById('coffeeImage').style.gridArea = 'coffeeImage';
+document.getElementById('barista1').style.gridArea = 'barista1';
+document.getElementById('barista2').style.gridArea = 'barista2';

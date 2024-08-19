@@ -22,15 +22,37 @@ img {
 
   .bodyContainer {
     display: grid;
-    max-height:100vh;
+    max-height: 100vh;
     grid-template-columns: 1fr 5fr 5fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
       'leftBar bodyReview bodyReview rightBar'
       'leftBar coffeeImage coffeeImage rightBar'
       'leftBar bodyText bodyText rightBar'
-      'leftBar barista1 barista2 rightBar'
+      'leftBar barista1 barista2 rightBar';
   }
+  #leftBar {
+    grid-area: leftBar;
+  }
+  #rightBar {
+    grid-area: rightBar;
+  }
+  #bodyReview {
+    grid-area: bodyReview;
+  }
+  #coffeeImage {
+    grid-area: coffeeImage;
+  }
+  #bodyText {
+    grid-area: bodyText;
+  }
+  #barista1 {
+    grid-area: barista1;
+  }
+  #barista2 {
+    grid-area: barista2;
+  }
+
   .navItem {
     display: flex;
     align-items: center;
@@ -38,7 +60,7 @@ img {
     font-size: 26px;
     font-family: "Kumar One", serif;
     color: white;
-    padding: 0px 12.5px;
+    padding: 0 12.5px;
   }
 
   #navLogo {
@@ -63,40 +85,20 @@ img {
   #navAbout:hover {
     background-color: brown;
   }
+
   .overlay-text {
     position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    color: #fff; 
-    font-size: 40px; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 40px;
     text-align: center;
     font-family: "Kumar One", serif;
   }
-}
-
-  #leftBar {
-    grid-area: leftBar;
-  }
-
-  #rightBar {
-    grid-area: rightBar;
-  }
-
-  #coffeeImage {
-    grid-area:coffeeImage;
-  }
-
-  #barista1 {
-    grid-area: barista1;
-  }
-
-  #barista2 {
-    grid-area: barista2;
-  }
 
   #bodyReview {
-    padding:5vh;
+    padding: 5vh;
     font-size: 15px;
     text-align: center;
     grid-area: bodyReview;
@@ -104,7 +106,7 @@ img {
   }
 
   #bodyText {
-    padding:5vh;
+    padding: 5vh;
     font-size: 20px;
     grid-area: bodyText;
     background-color: #523a28;
@@ -115,29 +117,48 @@ img {
 
   .footerContainer {
     display: grid;
-    grid-template-columns: ;
     background-color: #bf6336;
     height: 80px;
   }
 
-
-.image-container {
-  position: relative;
-  display: inline-block;
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-
   .bodyContainer {
     display: grid;
-    max-height:100vh;
+    max-height: 100vh;
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr 1fr 1fr;
     grid-template-areas:
-    'bodyReview'
-    'coffeeImage'
-    'bodyText'
-    'barista1'
-    'barista2'
+      'bodyReview'
+      'coffeeImage'
+      'bodyText'
+      'barista1'
+      'barista2';
+  }
+
+  #bodyText {
+    padding: 10px;
+    font-size: 20px;
+    grid-area: bodyText;
+    background-color: #523a28;
+    text-align: center;
+    color: white;
+    font-family: "Alata", sans-serif;
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Kumar One", serif;
   }
 }
