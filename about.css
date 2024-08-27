@@ -1,51 +1,75 @@
-html {
-  height: 100%;
-  width: 100%;
-}
-body {
+body, html {
   margin: 0;
+  padding: 0;
 }
 
-img {
-  width: 100%;
-  max-height:100%;
-  margin:0;
-}
-
-.bodyContainer {
+.aboutGrid {
   display: grid;
   max-height: 100vh;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr;
+  padding: 10px;
+  box-sizing: border-box;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr 0.8fr;
   grid-template-areas:
-  'imageOne paragraphOne'
-  'paragraphTwo imageTwo';
+    'aboutBlurb aboutBlurb aboutBlurb'
+    'imageOne paragraphOne paragraphOne'
+    'paragraphTwo paragraphTwo imageTwo'
+    'footer footer footer';
+  gap: 0px; 
 }
 
 .aboutItem {
-  background-color:#bf6336;
+  background-color: #523a28;
+  font-family: "Alata", sans-serif;
+  color: white;
+  font-size: 34px;
+  padding:20px;
+}
+
+#aboutBlurb {
+  grid-area: aboutBlurb;
+  padding: 5vh;
+  font-size: 26px;
+  text-align: center;
+  font-family: "Kumar One", serif;
+  background-color:white;
+  color:black;
 }
 
 #paragraphOne {
   grid-area: paragraphOne;
 }
+
 #imageOne {
   grid-area: imageOne;
+  background-color:white;
 }
+
 #paragraphTwo {
   grid-area: paragraphTwo;
 }
+
 #imageTwo {
   grid-area: imageTwo;
+  background-color:white;
 }
 
-  .navContainer {
-    display: grid;
-    grid-template-columns: 100px 500px 1fr 100px 20px 100px 25px;
-    background-color: #bf6336;
-    height: 80px;
-    align-self: start;
-  }
+.aboutGrid .footer {
+  grid-area: footer;
+  background-color: #bf6336;
+  height: 80px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.navContainer {
+  display: grid;
+  grid-template-columns: 100px 500px 1fr 100px 20px 100px 25px;
+  background-color: #bf6336;
+  height: 80px;
+  align-items: center;
+}
 
 .navItem {
   display: flex;
@@ -56,3 +80,5 @@ img {
   color: white;
   padding: 0px 12.5px;
 }
+
+
