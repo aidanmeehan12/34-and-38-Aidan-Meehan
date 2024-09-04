@@ -13,13 +13,29 @@ img {
   margin:0;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   .navContainer {
     display: grid;
-    grid-template-columns: 100px 500px 1fr 100px 20px 100px 25px;
+    grid-template-columns: 150px 100px 1fr 500px 1fr 100px 150px; /* Add blank space columns */
     background-color: #bf6336;
-    height: 80px;
+    height: 100;
     align-self: start;
+  }
+
+  #navLogo {
+    grid-column: 2 / span 1; /* Place logo after the blank space */
+    height: 100%;
+    width: 100%;
+  }
+
+  #navTitle {
+    grid-column: 4 / span 1; /* Place title centrally */
+  }
+
+  .dropdown {
+    grid-column: 6 / span 1; /* Place dropdown before the blank space */
+    max-height: 100%;
+    max-width: 70px;
   }
 
   .navItem {
@@ -30,29 +46,6 @@ img {
     font-family: "Kumar One", serif;
     color: white;
     padding: 0px 12.5px;
-  }
-
-  #navLogo {
-    grid-column: 1 / span 1;
-  }
-
-  #navTitle {
-    grid-column: 2 / span 1;
-  }
-
-  #navMenu {
-    grid-column: 4 / span 1;
-    justify-self: end;
-  }
-
-  #navAbout {
-    grid-column: 6 / span 1;
-    justify-self: end;
-  }
-
-  #navMenu:hover,
-  #navAbout:hover {
-    background-color: brown;
   }
   
   .smallText {
@@ -240,10 +233,30 @@ h5 {
 
   .navContainer {
     display: grid;
-    grid-template-columns: 100px 500px 1fr 100px 20px 100px 25px;
+    grid-template-columns: 100px 1fr 100px;
     background-color: #bf6336;
     height: 80px;
     align-self: start;
+  }
+
+  #navLogo {
+    grid-column: 1 / span 1; /* Place logo after the blank space */
+    max-height: 70px;
+    max-width: 70px;
+    padding: 5px;
+  }
+
+  #navTitle {
+    grid-column: 2 / span 1; /* Place title centrally */
+  }
+
+  .dropdown {
+    grid-column: 3 / span 1; /* Place dropdown before the blank space */
+    height:100%;
+    width:100%;
+    display: flex; /* Use flexbox for better alignment */
+    justify-content: center;
+    align-items: center; /* Center the icon vertically */
   }
 
   .navItem {
@@ -258,4 +271,46 @@ h5 {
   .smallText {
     display:none;
   }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  align-self: end;
+}
+.dropbtn {
+  background-color: #bf6336;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-family: "Kumar One", serif;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: "Kumar One", serif;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
 }

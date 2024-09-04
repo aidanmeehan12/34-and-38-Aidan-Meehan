@@ -17,11 +17,16 @@
 <body>
   
   <div class="navContainer">
-    <div class="navItem" id="navLogo">Logo</div>
-    <div class="navItem bigText" id="navTitle">HVHS Coffee House - Menu </div>
-    <div class="navItem smallText" id="navTitle">HVHS Coffee House - Menu </div>
-    <div class="navItem" id="navMenu" onclick="sendToHome()">Home</div>
-    <div class="navItem" id="navAbout" onclick="sendToAbout()">About</div>
+    <img class="navItem" id="navLogo" src=images/logo.png></img>
+    <div class="navItem bigText" id="navTitle">HVHS Coffee House</div>
+
+    <div class="dropdown">
+      <img class="dropbtn" src="images/menus.png" alt="menuIcon"</img>
+      <div class="dropdown-content">
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
   </div>
 
   <div id="menuBlurb">Check out all the drinks we offer at the coffee house!</div>

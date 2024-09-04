@@ -9,6 +9,113 @@ body {
 
 img {
   width: 100%;
+  height:100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .navContainer {
+      display: grid;
+      grid-template-columns: 150px 100px 1fr 500px 1fr 100px 150px; /* Add blank space columns */
+      background-color: #bf6336;
+      height: 100;
+      align-self: start;
+    }
+
+    #navLogo {
+      grid-column: 2 / span 1; /* Place logo after the blank space */
+      height: 100%;
+      width: 100%;
+    }
+
+    #navTitle {
+      grid-column: 4 / span 1; /* Place title centrally */
+    }
+
+    .dropdown {
+      grid-column: 6 / span 1; /* Place dropdown before the blank space */
+      max-height: 100%;
+      max-width: 70px;
+    }
+
+  .bodyContainer {
+    display: grid;
+    max-height: 100vh;
+    grid-template-columns: 150px 5fr 5fr 150px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      'leftBar bodyReview bodyReview rightBar'
+      'leftBar coffeeImage coffeeImage rightBar'
+      'leftBar bodyText bodyText rightBar'
+      'leftBar barista1 barista2 rightBar';
+  }
+  .navItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-family: "Kumar One", serif;
+    color: white;
+    padding: 0 12.5px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .bodyContainer {
+    display: grid;
+    max-height: 100vh;
+    grid-template-columns: 100vw;
+    grid-template-rows: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-areas:
+      'bodyReview'
+      'coffeeImage'
+      'bodyText'
+      'barista1'
+      'barista2';
+  }
+  .navContainer {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    background-color: #bf6336;
+    height: 80px;
+    align-self: start;
+  }
+
+  #navLogo {
+    grid-column: 1 / span 1; /* Place logo after the blank space */
+    max-height: 70px;
+    max-width: 70px;
+    padding: 5px;
+  }
+  
+  #navTitle {
+    grid-column: 2 / span 1; /* Place title centrally */
+  }
+
+  .dropdown {
+    grid-column: 3 / span 1; /* Place dropdown before the blank space */
+    height:100%;
+    width:100%;
+    display: flex; /* Use flexbox for better alignment */
+    justify-content: center;
+    align-items: center; /* Center the icon vertically */
+  }
+  
+  .navItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-family: "Kumar One", serif;
+    color: white;
+    padding: 0 12.5px;
+  }
+  .dropbtn {
+    width: 40px; /* Ensuring the width fits within the smaller screen size */
+    height: 40px; /* Matching height and width to ensure the icon fits well */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the icon inside the button */
+  }
 }
 
 #leftBar {
@@ -32,43 +139,6 @@ img {
 #barista2 {
   grid-area: barista2;
 }
-
-.navItem {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  font-family: "Kumar One", serif;
-  color: white;
-  padding: 0 12.5px;
-}
-
-#navLogo {
-  grid-column: 1 / span 1;
-  max-height:70px;
-  max-width:70px;
-  padding:5px;
-}
-
-#navTitle {
-  grid-column: 2 / span 1;
-}
-
-#navMenu {
-  grid-column: 4 / span 1;
-  justify-self: end;
-}
-
-#navAbout {
-  grid-column: 6 / span 1;
-  justify-self: end;
-}
-
-#navMenu:hover,
-#navAbout:hover {
-  background-color: brown;
-}
-
 #bodyReview {
   padding: 5vh;
   font-size: 15px;
@@ -87,128 +157,21 @@ img {
   font-family: "Alata", sans-serif;
 }
 
-
-@media only screen and (min-width: 768px) {
-  .navContainer {
-    display: grid;
-    grid-template-columns: 1fr 2fr 3fr 1fr;
-    background-color: #bf6336;
-    height: 80px;
-    grid-template-areas:
-    'navLogo navTitle dropdown'
-  }
-
-  .bodyContainer {
-    display: grid;
-    max-height: 100vh;
-    grid-template-columns: 1fr 5fr 5fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-      'leftBar bodyReview bodyReview rightBar'
-      'leftBar coffeeImage coffeeImage rightBar'
-      'leftBar bodyText bodyText rightBar'
-      'leftBar barista1 barista2 rightBar';
-  }
-
-  .overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: black;
-    font-size: 50px;
-    text-align: center;
-    font-family: "Kumar One", serif;
-    background-color:white;
-    border:5px solid black;
-    padding:30px 50px;
-  }
-
-  .footerContainer {
-    display: grid;
-    background-color: #bf6336;
-    height: 80px;
-    align-self: start;
-  }
-
-  .image-container {
-    position: relative;
-    display: inline-block;
-  }
-  
-  #smallText {
-    display:none;
-  }
+.dropdown {
+  position: relative;
+  display: inline-block;
+  align-self: end;
 }
-
-@media only screen and (max-width: 768px) {
-  .bodyContainer {
-    display: grid;
-    max-height: 100vh;
-    grid-template-columns: 100vw;
-    grid-template-rows: 1fr 1fr 2fr 1fr 1fr;
-    grid-template-areas:
-      'bodyReview'
-      'coffeeImage'
-      'bodyText'
-      'barista1'
-      'barista2';
-  }
-  
-  .navContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
-    background-color: #bf6336;
-    height: 80px;
-    align-self: start;
-    grid-template-areas:
-    'leftBarNav navLogo navTitle dropdown rightBarNav';
-  }
-
-  #bodyText {
-    padding: 10px;
-    font-size: 20px;
-    grid-area: bodyText;
-    background-color: #523a28;
-    text-align: center;
-    color: white;
-    font-family: "Alata", sans-serif;
-  }
-  
-  .overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 20px;
-    text-align: center;
-    font-family: "Kumar One", serif;
-  }
-  
-  #bigText {
-    display:none;
-  }
-  
-}
-
 .dropbtn {
-  background-color: #4CAF50;
+  background-color: #bf6336;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
+  font-family: "Kumar One", serif;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-  grid-area:dropdown;
-  align-self: right;
-}
-
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -223,6 +186,7 @@ img {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  font-family: "Kumar One", serif;
 }
 
 .dropdown-content a:hover {background-color: #f1f1f1}
@@ -233,4 +197,11 @@ img {
 
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
+}
+
+.footerContainer {
+  display: grid;
+  background-color: #bf6336;
+  height: 80px;
+  align-self: start;
 }
