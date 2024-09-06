@@ -10,7 +10,7 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden; /* Prevents horizontal scrolling */
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 
@@ -23,24 +23,24 @@ img {
 @media only screen and (min-width: 768px) {
     .navContainer {
       display: grid;
-      grid-template-columns: 150px 100px 1fr 500px 1fr 100px 150px; /* Add blank space columns */
+      grid-template-columns: 150px 100px 1fr 500px 1fr 100px 150px; 
       background-color: #bf6336;
       height: 100;
       align-self: start;
     }
 
     #navLogo {
-      grid-column: 2 / span 1; /* Place logo after the blank space */
+      grid-column: 2 / span 1;
       height: 100%;
       width: 100%;
     }
 
     #navTitle {
-      grid-column: 4 / span 1; /* Place title centrally */
+      grid-column: 4 / span 1; 
     }
 
     .dropdown {
-      grid-column: 6 / span 1; /* Place dropdown before the blank space */
+      grid-column: 6 / span 1; 
       max-height: 100%;
       max-width: 70px;
     }
@@ -68,7 +68,7 @@ img {
 }
 
 @media only screen and (max-width: 768px) {
-  .bodyContainer {
+  .bodyContainer { /* smaller size, putting everything in one row */
     display: grid;
     max-height: 100vh;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -88,47 +88,51 @@ img {
   }
 
   #navLogo {
-    grid-column: 1 / span 1; /* Place logo after the blank space */
+    grid-column: 1 / span 1; 
     max-height: 70px;
     max-width: 70px;
     padding: 5px;
   }
   
   #navTitle {
-    grid-column: 2 / span 1; /* Place title centrally */
+    grid-column: 2 / span 1;
+    font-size:20px;
   }
 
   .dropdown {
-    grid-column: 3 / span 1; /* Place dropdown before the blank space */
+    grid-column: 3 / span 1;
     height:100%;
     width:100%;
-    display: flex; /* Use flexbox for better alignment */
+    display: flex; 
     justify-content: center;
-    align-items: center; /* Center the icon vertically */
+    align-items: center;
   }
   
   .navItem {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
+    font-size: 18px;
     font-family: "Kumar One", serif;
     color: white;
     padding: 0 12.5px;
   }
   .dropbtn {
-    width: 40px; /* Ensuring the width fits within the smaller screen size */
-    height: 40px; /* Matching height and width to ensure the icon fits well */
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
-    align-items: center; /* Center the icon inside the button */
+    align-items: center; 
+  }
+  #bodyText {
+    font-size: 12px;
   }
 }
 
-#leftBar {
+#leftBar { /* white bars on home page */
   grid-area: leftBar;
 }
-#rightBar {
+#rightBar { /* white bars on home page */
   grid-area: rightBar;
 }
 #bodyReview {
@@ -143,8 +147,16 @@ img {
 #barista1 {
   grid-area: barista1;
 }
+#barista1:hover {
+  background-color: #f1f1f1;
+  opacity:0.7;
+}
 #barista2 {
   grid-area: barista2;
+}
+#barista2:hover {
+  background-color: #f1f1f1;
+  opacity:0.7;
 }
 #bodyReview {
   padding: 5vh;
@@ -196,7 +208,7 @@ img {
   font-family: "Kumar One", serif;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color: #f1f1f1;}
 
 .dropdown:hover .dropdown-content {
   display: block;

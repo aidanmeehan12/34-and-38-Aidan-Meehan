@@ -321,3 +321,19 @@ h5 {
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 }
+
+.footer {
+  grid-area: footer;
+  background-color: #bf6336;
+  height: 80px;
+  width: 100%;
+  margin-top:20px;
+}
+h5 {
+  padding:15px;
+  font-family: "Alata", sans-serif;
+  color:white;
+}
+a {
+  color:yellow;
+}

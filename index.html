@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-
+  <title>HVHS Coffee House</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="images/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+  <meta name="description" content="Aidan Meehan, Hutt Valley High School 2024, Coffee House, Menu Page, flat white, espresso, iced coffee, lower hutt">
   <script src="script.js"></script>
 </head>
 
 <body>
   
   <div class="navContainer">
-    <img class="navItem" id="navLogo" src=images/logo.png></img>
-    <div class="navItem bigText" id="navTitle">HVHS Coffee House</div>
+    <img class="navItem" id="navLogo" alt="coffeeLogo" src=images/logo.png>
+    <div class="navItem" id="navTitle">HVHS Coffee House</div>
     
     <div class="dropdown">
-      <img class="dropbtn" src="images/menus.png" alt="menuIcon"</img>
+      <img class="dropbtn" src="images/menus.png" alt="menuIcon">
       <div class="dropdown-content">
         <a href="menu.html">Menu</a>
         <a href="about.html">About</a>
@@ -30,15 +31,16 @@
   
   <div class="bodyContainer">
     <div class="bodyItem" id="bodyReview">"The barista who served me was very tall and attractive"</div>
-    <img class="bodyItem" id="coffeeImage" src="images/coffeeImage.jpg"></img>
+    <img class="bodyItem" id="coffeeImage" alt="coffeeImage" src="images/coffeeImage.jpg">
     <div id="leftBar"></div>
     <div id="rightBar"></div>
     
-    <div class="bodyItem" id="bodyText"> <center> Welcome to the HVHS Coffee House, where the rich blend of community and caffeine fuels our vibrant school spirit. More than just a coffee shop, HVHS Coffee House is a lively hub for creativity and connection, where the hum of laughter and the soothing notes of background music create an inviting atmosphere. Whether you're seeking a morning pick-me-up, a cozy study spot, or a place to unwind with friends, our welcoming space is designed to enhance your school experience. Embrace the aroma, savor the flavor, and make HVHS Coffee House your go-to destination for a delightful break in the heart of our school community. </center></div>
+    <div class="bodyItem" id="bodyText"> Welcome to the HVHS Coffee House, where the rich blend of community and caffeine fuels our vibrant school spirit. More than just a coffee shop, HVHS Coffee House is a lively hub for creativity and connection, where the hum of laughter and the soothing notes of background music create an inviting atmosphere. Whether you're seeking a morning pick-me-up, a cozy study spot, or a place to unwind with friends, our welcoming space is designed to enhance your school experience. Embrace the aroma, savor the flavor, and make HVHS Coffee House your go-to destination for a delightful break in the heart of our school community.></div>
     
-      <img src="images/barista1.jpg" alt="barista1" id="barista1">
+      <img src="images/barista1.jpg" alt="barista1" id="barista1" onclick="sendToMenu()">
 
-      <img src="images/barista2.jpg" alt="barista2" id="barista2">
+      <img src="images/barista2.jpg" alt="barista2" id="barista2" onclick="sendToAbout()">
+    </div>
 
   <div class="footer"></div>
 </body>
